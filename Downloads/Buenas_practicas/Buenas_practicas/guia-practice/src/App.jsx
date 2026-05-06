@@ -9,11 +9,11 @@ function App() {
  const [contador, setContador] = useState(0);
   return (
     <div>
-      <h1>Bienvenidos al imalaya</h1>
+      <h1>Hola parceros</h1>
       {contador}
-      <button onClick={() => setContador(contador + 1)}>Incrementar</button>
+      <button onClick={() => setContador(contador + 1)}>Aumentar</button>
       <button onClick={() => setContador(contador - 1)}>Disminuir</button>
-      <button onClick={() => setContador(0)}>Reset</button> 
+      <button onClick={() => setContador(0)}>Resetiar</button> 
       <Component texto={contador} />
     </div>
   )
