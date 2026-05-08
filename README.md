@@ -16,12 +16,12 @@ This project was created as an academic activity to reinforce the use of:
 
 The application allows you to:
 
-Display reusable components  
-Render text and images dynamically  
-Manipulate state with `useState`  
-Capture events with `onClick` and `onChange`  
-Interact with a dynamic counter  
-View changes in real time  
+- Display reusable components  
+- Render text and images dynamically  
+- Manipulate state with `useState`  
+- Capture events with `onClick` and `onChange`  
+- Interact with a dynamic counter  
+- View changes in real time  
 
 ---
 
