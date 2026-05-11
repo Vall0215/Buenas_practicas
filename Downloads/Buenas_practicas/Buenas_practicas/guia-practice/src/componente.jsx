@@ -1,7 +1,7 @@
-function Component(props){
-    return(
-        <h2>{props.texto}</h2>
-    )
+function TextoDestacado({ texto }) {
+  return (
+    <h2>{texto}</h2>
+  )
 }
 
-export default Component; 
+export default TextoDestacado

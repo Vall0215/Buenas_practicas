@@ -7,31 +7,35 @@ function App() {
   const [nombre, setNombre] = useState('')
 
   const incrementar = () => {
-    setContador(contador + 1)
+    setContador(prev => prev + 1)
   }
 
   const disminuir = () => {
-    setContador(contador - 1)
+    setContador(prev => Math.max(0, prev - 1))
   }
 
   const resetear = () => {
     setContador(0)
   }
 
-return (
-  <div className="contenedor">
+  const handleLikeReact = () => alert('Te gusta React')
+  const handleLikeVite = () => alert('Te gusta Vite')
+  const handleLikeJS = () => alert('Te gusta JavaScript')
 
-    <h1>Proyecto React con Props y State</h1>
+  return (
+    <div className="contenedor">
 
-    <h2 className="contador">
-      Clicks realizados: {contador}
-    </h2>
+      <h1>Proyecto React con Props y State</h1>
 
-    <div className="botones">
-      <button onClick={incrementar}>Agregar click</button>
-      <button onClick={disminuir}>Quitar click</button>
-      <button onClick={resetear}>Reiniciar contador</button>
-    </div>
+      <h2 className="contador">
+        Clicks realizados: {contador}
+      </h2>
+
+      <div className="botones">
+        <button onClick={incrementar}>Agregar click</button>
+        <button onClick={disminuir}>Quitar click</button>
+        <button onClick={resetear}>Reiniciar contador</button>
+      </div>
 
       <div className="input-container">
         <input
@@ -40,7 +44,6 @@ return (
           value={nombre}
           onChange={(e) => setNombre(e.target.value)}
         />
-
         <h3>Hola {nombre}</h3>
       </div>
 
@@ -50,7 +53,7 @@ return (
           imagen="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
           descripcion="React es una biblioteca de JavaScript para construir interfaces de usuario."
           botonTexto="Me gusta React"
-          accionBoton={() => alert('Te gusta React')}
+          accionBoton={handleLikeReact}
         />
 
         <Tarjeta
@@ -58,7 +61,7 @@ return (
           imagen="https://vitejs.dev/logo.svg"
           descripcion="Vite es una herramienta moderna para desarrollar proyectos frontend rápidamente."
           botonTexto="Me gusta Vite"
-          accionBoton={() => alert('Te gusta Vite')}
+          accionBoton={handleLikeVite}
         />
 
         <Tarjeta
@@ -66,7 +69,7 @@ return (
           imagen="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
           descripcion="JavaScript es el lenguaje principal para desarrollo web interactivo."
           botonTexto="Me gusta JavaScript"
-          accionBoton={() => alert('Te gusta JavaScript')}
+          accionBoton={handleLikeJS}
         />
       </div>
     </div>
